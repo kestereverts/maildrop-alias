@@ -1,0 +1,26 @@
+{
+  "name": "maildrop-alias",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "big-integer": "^1.6.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kestereverts/maildrop-alias.git"
+  },
+  "author": "Kester Everts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kestereverts/maildrop-alias/issues"
+  },
+  "homepage": "https://github.com/kestereverts/maildrop-alias#readme",
+  "bin": {
+    "maildrop-alias": "index.js",
+  }
+}
