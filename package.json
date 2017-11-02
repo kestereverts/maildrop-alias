@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/kestereverts/maildrop-alias#readme",
   "bin": {
-    "maildrop-alias": "index.js",
-  }
+    "maildrop-alias": "index.js"
+  } 
 }
