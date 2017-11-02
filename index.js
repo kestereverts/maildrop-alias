@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 "use strict";
 
 const bigInt = require("big-integer");
