@@ -20,9 +20,14 @@ if(process.argv[3] === "--no-base36") {
  outputBase = 10;
 }
 
-if(process.argv[3] == "--convert") {
-  console.log(bigInt(param, 36).toString(10));
-  process.exit(0);
+if(process.argv[3] === "--convert") {
+  try {
+    console.log(bigInt(param, 36).toString(10));
+    process.exit(0);
+  } catch(e) {
+    console.error(e.message);
+    process.exit(1);
+  }
 }
 
 if(param.substr(0, 2) === prefix) {
@@ -32,11 +37,23 @@ if(param.substr(0, 2) === prefix) {
 }
 
 function processRegularInbox(regularInbox) {
-  console.log(`${regularInbox} -> ${convertToAltInbox(regularInbox)}`);
+  try {
+    console.log(`${regularInbox} -> ${convertToAltInbox(regularInbox)}`);
+    process.exit(0);
+  } catch(e) {
+    console.error(e.message);
+    process.exit(1);
+  }
 }
 
 function processAltInbox(altInbox) {
-  console.log(`${altInbox} -> ${convertToRegularInbox(altInbox)}`);
+  try {
+    console.log(`${altInbox} -> ${convertToRegularInbox(altInbox)}`);
+    process.exit(0);
+  } catch(e) {
+    console.error(e.message);
+    process.exit(1);
+  }
 }
 
 function convertToAltInbox(regularInbox) {
